@@ -5,12 +5,14 @@ import java.io.Serializable;
 public class Basketball implements Serializable {
     String name;
     String image;
-    String sezon;
+    String season;
+    String description;
 
-    public Basketball(String name, String image, String sezon) {
+    public Basketball(String name, String image, String season, String description) {
         this.name = name;
         this.image = image;
-        this.sezon = sezon;
+        this.season = season;
+        this.description=description;
     }
 
     public String getName() {
@@ -21,8 +23,12 @@ public class Basketball implements Serializable {
         return image;
     }
 
-    public String getSezon() {
-        return sezon;
+    public String getSeason() {
+        return season;
+    }
+
+    public String getDescription() {
+        return description;
     }
 
     public void setName(String name) {
@@ -33,7 +39,11 @@ public class Basketball implements Serializable {
         this.image = image;
     }
 
-    public void setSezon(String sezon) {
-        this.sezon = sezon;
+    public void setSeason(String season) {
+        this.season = season;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
     }
 }

@@ -48,10 +48,8 @@ class BasketballViewHolder extends RecyclerView.ViewHolder {
 
     void onBind(Basketball basketball){
         binding.textViewTitle.setText(basketball.getName());
-        binding.textViewSezon.setText(basketball.getSezon());
-        binding.imageViewIcon.setImageResource(Integer.parseInt(basketball.getImage()));
+        binding.textViewSezon.setText(basketball.getSeason());
+        Glide.with(this.itemView).load(basketball.getImage()).into(binding.imageViewIcon);
 
-
-       Glide.with(binding.imageViewIcon).load(basketball.getImage()).into(binding.imageViewIcon);
     }
 }
